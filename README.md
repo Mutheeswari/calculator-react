@@ -1,2 +1,3 @@
 # calculator-react
-# Welcome React JS 
+
+# React JS is a front end library framework.
