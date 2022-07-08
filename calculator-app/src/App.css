@@ -15,7 +15,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,6 +23,21 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+.Buttonclear
+{
+  width: 250px;
+  border-radius: 15px;
+  font-size: medium;
+  height: 100px;
+  background-color: #914caf; /* Green */
+  color: black;
+  float :left;
+}
+.button:hover
+ {
+  background-color: #e7e7e7;
+}
+
 
 .App-link {
   color: #61dafb;

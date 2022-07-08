@@ -1,14 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import ButtonClear from './ButtonClear';
 import reportWebVitals from './reportWebVitals';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <ButtonClear/>
+    
   </React.StrictMode>
+  
 );
 
 // If you want to start measuring performance in your app, pass a function
