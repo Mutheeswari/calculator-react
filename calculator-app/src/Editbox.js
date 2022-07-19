@@ -1,10 +1,14 @@
 import './App.css';
-
+import { useContext  } from "react";
+import { ButtonContext } from "./App";
 function Editbox() {
+  const buttoncont = useContext(ButtonContext);
+  const {digit}=buttoncont;
   return (
     <div className="App">
       <header className="App-header">
-      <input type="text" id="edittxt" name="edittxt" class="set-width" value="0123456789" dir="rtl">
+      <input type="text" id="edittxt" name="edittxt" class="set-width" value={digit} dir="rtl">
+      
         {/*
         <a
           className="App-link"

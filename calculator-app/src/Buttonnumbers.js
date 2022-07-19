@@ -1,22 +1,46 @@
 import './App.css';
-
+import { useContext  } from "react";
+import { ButtonContext } from "./App";
 function Buttonnumbers() {
-  const numbers = ['C','/','*','X',7,8,9,'-',4,5,6,'+',1,2,3,'%',0,'.'];
+  const buttoncont = useContext(ButtonContext);
+  const {digit, setDigit}=buttoncont
+  const numbers = ['/','*','-','+',9,8,7,4,5,6,1,2,3,0,'%','.','='];
+  const appendNumber= (number) => {
+    // To 
+    if (digit === 0) {
+      setDigit(number.toString())
+    }
+    else{
+      setDigit(digit.toString()+number.toString())
+    }
+    
+  }
+  
   const listItems = numbers.map((number, index) =>
-      <li  className="button-numbers" key={number.toString()}>
-          {number}
+      <li  className="button-numbers" key={number.toString()} onClick={()=> appendNumber(number)}>
+           {number}
       </li>
       );
   
+  
+  
+  // const clearCount=()=>{
+  //   setClearr((clearr)=>'')
+  // }
   return (
     <div className="App">
       <header className="App-header">
+      
       <ul className="ul-numbers">
-      <button type="button" className="button-cldel">Clear</button > 
+      
+      <button type="button" className="button-cldel" onClick={()=>setDigit(0)}>Clear</button > 
       <button type="button" className="button-cldel">Del</button >
       </ul>
       <ul className="ul-numbers">{listItems} </ul>
-        {/*
+      {/* <ButtonContext.Provider value={clearr}>
+        {buttons}
+      </ButtonContext.Provider> */}
+         {/*
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -30,9 +54,10 @@ function Buttonnumbers() {
         Welcome to my new project
         </a>
   */}
+      
       </header>
     </div>
   );
-}
+};
 
-export default Buttonnumbers;
+export default Buttonnumbers
