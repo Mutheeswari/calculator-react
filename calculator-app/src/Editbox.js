@@ -1,28 +1,16 @@
-import './App.css';
-import { useContext  } from "react";
-import { ButtonContext } from "./App";
+import './App.css';     // import App.css to get the class
+import { useContext  } from "react";   // import useContext 
+import { ButtonContext } from "./App";  // import ButtonContext which was created in the App.js
+
 function Editbox() {
-  const buttoncont = useContext(ButtonContext);
-  const {digit}=buttoncont;
+  const buttoncont = useContext(ButtonContext);   // Define useContext with imported context (ButtonContext)
+  const {digit}=buttoncont;     // destructuring the (buttoncont) context variable which are needed
   return (
+    // call "App" and  "App-header" class in the App.css
     <div className="App">
       <header className="App-header">
+        {/*Display Edit box with value which was returned from App.js*/}
       <input type="text" id="edittxt" name="edittxt" class="set-width" value={digit} dir="rtl">
-      
-        {/*
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-
-          Welcome to Versatile product
-          
-        </a>
-        <a className="App-link1"></a>
-          <p class="solid">calculator</p>
-  */}
       </input>
       </header>
     </div>
