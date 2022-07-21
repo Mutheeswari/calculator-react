@@ -6,7 +6,6 @@ function Buttonnumbers() {
   const buttoncont = useContext(ButtonContext);   // Define useContext with imported context (ButtonContext)
   const {digit, setDigit}=buttoncont      // destructuring the (buttoncont) context variable which are needed (values need to be changed)
   const numbers = ['/','*','-','+',9,8,7,4,5,6,1,2,3,0,'%','.','='];    // to create array element
-
   // To append numbers in the EditBox 
   const appendNumber= (number) => {
     // To find whether the EditBox value is "0" or not
