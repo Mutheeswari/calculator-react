@@ -4,14 +4,17 @@ import { ButtonContext } from "./App";  // import ButtonContext which was create
 
 function Editbox() {
   const buttoncont = useContext(ButtonContext);   // Define useContext with imported context (ButtonContext)
-  const {digit}=buttoncont;     // destructuring the (buttoncont) context variable which are needed
+  const {digit}=buttoncont;  // destructuring the (buttoncont) context variable which are needed
+  var str = "Your string"
+const str1 = str.slice(-3); 
+console.log(str1)
   return (
     // call "App" and  "App-header" class in the App.css
     <div className="App">
       <header className="App-header">
         {/*Display Edit box with value which was returned from App.js*/}
-      <input type="text" id="edittxt" name="edittxt" class="set-width" value={digit} dir="rtl">
-      </input>
+       <input type="text" id="edittxt" name="edittxt" className="set-width" value={digit}/> 
+       
       </header>
     </div>
   );
