@@ -13,8 +13,8 @@ console.log(str1)
     <div className="App">
       <header className="App-header">
         {/*Display Edit box with value which was returned from App.js*/}
-       <input type="text" id="edittxt" name="edittxt" className="set-width" value={digit}/> 
-       
+      <input type="text" id="edittxt" name="edittxt" class="set-width" value={digit}>
+      </input>
       </header>
     </div>
   );
