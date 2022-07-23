@@ -1,23 +1,22 @@
-import React,{useState, createContext } from 'react';    // importing Hook and React
-import './App.css';   // Importing App.css for accessing class
-import Editbox from './Editbox'     // Import Editbox.js 
-import Buttonnumbers from './Buttonnumbers'   // Import buttonnumbers.js 
-export const ButtonContext = createContext();   // to create context for passing the state
+import React, { useState, createContext } from "react"; // importing Hook and React
+import "./App.css"; // Importing App.css for accessing class
+import Editbox from "./Editbox"; // Import Editbox.js
+import Buttonnumbers from "./Buttonnumbers"; // Import buttonnumbers.js
+export const ButtonContext = createContext(); // to create context for passing the state
 // To define the function App
 function App() {
-  const [digit, setDigit] = useState(0);    // Declare useState to initialize the digit in the EditBox
+  const [digit, setDigit] = useState(0); // Declare useState to initialize the digit in the EditBox
   return (
     // call "App" and  "App-header" class in the App.css
-    <div className="App">     
+    <div className="App">
       <header className="App-header">
         {/* Pass the state to another component using context provider */}
-      <ButtonContext.Provider value={{digit, setDigit}}>    
-        <Editbox />     {/*call Editbox.js file*/}
-        <Buttonnumbers/>    {/*call Buttonnumbers.js file*/}
-      </ButtonContext.Provider> 
+        <ButtonContext.Provider value={{ digit, setDigit }}>
+          <Editbox /> {/*call Editbox.js file*/}
+          <Buttonnumbers /> {/*call Buttonnumbers.js file*/}
+        </ButtonContext.Provider>
       </header>
     </div>
   );
-  };
-
+}
 export default App;

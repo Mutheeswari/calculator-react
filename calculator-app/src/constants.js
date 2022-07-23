@@ -1,0 +1,20 @@
+export const operators = ["/", "*", "-", "+", "%", ".", "="];
+export const buttonLabels = [
+    "/",
+    "*",
+    "-",
+    "+",
+    9,
+    8,
+    7,
+    4,
+    5,
+    6,
+    1,
+    2,
+    3,
+    0,
+    "%",
+    ".",
+    "=",
+  ]; // to create array element
