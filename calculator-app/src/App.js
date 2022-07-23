@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React, { useState, createContext } from "react"; // importing Hook and React
+import "./App.css"; // Importing App.css for accessing class
+import Editbox from "./Editbox"; // Import Editbox.js
+import Buttonnumbers from "./Buttonnumbers"; // Import buttonnumbers.js
+export const ButtonContext = createContext(); // to create context for passing the state
+// To define the function App
 function App() {
+  const [digit, setDigit] = useState(0); // Declare useState to initialize the digit in the EditBox
   return (
+    // call "App" and  "App-header" class in the App.css
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Welcome to Versatile product
-        </a>
+        {/* Pass the state to another component using context provider */}
+        <ButtonContext.Provider value={{ digit, setDigit }}>
+          <Editbox /> {/*call Editbox.js file*/}
+          <Buttonnumbers /> {/*call Buttonnumbers.js file*/}
+        </ButtonContext.Provider>
       </header>
     </div>
   );
 }
-
 export default App;
