@@ -1,35 +1,35 @@
 import "./App.css"; // import App.css to get the class
-import { useContext } from "react"; // import useContext
+import { useContext,useState } from "react"; // import useContext
 import { ButtonContext } from "./App"; // import ButtonContext which was created in the App.js
-import { operators, buttonLabels } from "./constants";
+import { operators,buttonLabels } from "./constants";
 function Buttonnumbers() {
   const { digit, setDigit } = useContext(ButtonContext); // Define useContext with imported context (ButtonContext)
-
+  const [arrayvalue, setArrayvalue] = useState([]); 
   const removeString = (digi) => {
-    if (digi.slice(-1) === " ") {
-      setDigit(digi.slice(0, -3));
-    } else {
-      setDigit(digi.slice(0, -1));
-    }
+    setDigit(digi.slice(0, -1));
   };
   // To append numbers in the EditBox
   const appendNumber = (number) => {
     // To find whether the EditBox value is "0" or not
     // "===" to check the codition along with datatype
     if (digit === 0) {
-      if (operators.includes(number.toString())) {
-        setDigit(" " + number.toString() + " ");
-      } else {
-        setDigit(number.toString()); //to call setDigit to change the editbox value if the previous value is "0"
-      }
+      setDigit(number); //to call setDigit to change the editbox value if the previous value is "0"
     } else {
-      if (operators.includes(number.toString())) {
-        setDigit(digit.toString() + " " + number.toString() + " ");
-      } else {
-        setDigit(digit.toString() + number.toString()); //to call setDigit if the previous value
-      }
+      setDigit(''+digit + number); //to call setDigit if the previous value
     }
+    setArrayvalue.push(digit)
   };
+  const operatorProcess = (number) => {
+    setDigit(number);
+  }
+
+  const enterNumber = (number) => {
+      if (operators.includes(number)) {
+        setArrayvalue.push(number)
+        operatorProcess (number);
+      }
+      appendNumber (number);
+  }
 
   // create "for loop" with map for the buttons with arrow function
   const listItems = buttonLabels.map((number, index) => (
@@ -37,7 +37,7 @@ function Buttonnumbers() {
     <li
       className="button-numbers"
       key={number.toString()}
-      onClick={() => appendNumber(number)}
+      onClick={() => enterNumber(number)}
     >
       {number}
     </li>
