@@ -49,11 +49,12 @@ ul.ul-numbers {
 .button-cldel {
   width: 250px;
   border-radius: 15px;
-  font-size: 50px;
+  font-size: 35px;
   height: 70px;
-  color: black;
+  color: white;
   text-align: center;
-  background-color:white;
+  font-family:'Cutive Mono', monospace;
+  background: grey;
   justify-content: center;
   display: inline-block;
   padding: auto;
@@ -61,9 +62,9 @@ ul.ul-numbers {
 }
 
 .button-cldel:hover {
-  background-color: aqua;
+  background-color:orange;
 }
 
 .button-numbers:hover {
-  background-color: aqua;
+  background-color:orange;
 }

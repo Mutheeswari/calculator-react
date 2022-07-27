@@ -53,14 +53,14 @@ function Buttonnumbers() {
             className="button-cldel"
             onClick={() => setDigit(0)}
           >
-            Clear
+            CLEAR
           </button>
           <button
             type="button"
             className="button-cldel"
             onClick={() => removeString(digit)}
           >
-            Del
+            DEL
           </button>
         </ul>
         <ul className="ul-numbers">{listItems} </ul>
