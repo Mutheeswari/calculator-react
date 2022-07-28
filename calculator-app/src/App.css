@@ -42,7 +42,7 @@ ul.ul-numbers {
 }
 .button-cldel {
   width: 250px;
-  border-radius: 15px;
+  border-radius: 8px;
   font-size: 35px;
   height: 70px;
   color: white;
@@ -51,8 +51,8 @@ ul.ul-numbers {
   background: grey;
   justify-content: center;
   display: inline-block;
-  padding: auto;
-  margin: auto;
+  padding: 50px;
+  margin: 10px;
 }
 .button-cldel:hover {
   background-color:orange;
