@@ -17,4 +17,6 @@ export const buttonLabels = [
   "%",
   ".",
   "=",
+  "CLEAR",
+  "DEL",
 ]; // to create array element
