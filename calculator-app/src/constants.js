@@ -14,6 +14,9 @@ export const buttonLabels = [
   "-",
   0,
   "=",
-  "+",
+  "+"
 ]; // to create array element
-export const buttonName = ["CLEAR", "DEL"];
+export const buttonName = {
+  'clear': 'CLEAR',
+  'delete' : 'DEL'
+}
