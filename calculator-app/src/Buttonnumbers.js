@@ -1,7 +1,7 @@
 import "./App.css"; // import App.css to get the class
 import { useContext, useState } from "react"; // import useContext
 import { ButtonContext } from "./App"; // import ButtonContext which was created in the App.js
-import { operators, buttonLabels } from "./constants";
+import { operators, buttonLabels, buttonName } from "./constants";
 function Buttonnumbers() {
   const { digit, setDigit } = useContext(ButtonContext); // Define useContext with imported context (ButtonContext)
   const [arrayvalue, setArrayvalue] = useState({
@@ -67,7 +67,8 @@ function Buttonnumbers() {
 
   // create "for loop" with map for the buttons with arrow function
   const listItems = buttonLabels.map((number, index) => (
-    // Button with onClick
+    
+      // Button with onClick
     <li
       className="button-numbers"
       key={number.toString()}
@@ -87,14 +88,14 @@ function Buttonnumbers() {
             className="button-cldel"
             onClick={() => setDigit(0)}
           >
-            Clear
+          {buttonName.clear}
           </button>
           <button
             type="button"
             className="button-cldel"
             onClick={() => removeString(digit)}
           >
-            Del
+           {buttonName.delete}
           </button>
         </ul>
         <ul className="ul-numbers">{listItems} </ul>
