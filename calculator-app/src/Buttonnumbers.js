@@ -41,6 +41,9 @@ function Buttonnumbers() {
       if (arrayvalue.operator === "+") {
         setDigit(Number(arrayvalue.firstItem) + Number(arrayvalue.thirdItem));
       }
+      else if (arrayvalue.operator === "-") {
+        setDigit(Number(arrayvalue.firstItem) - Number(arrayvalue.thirdItem));
+      };
     }
   };
   // create "for loop" with map for the buttons with arrow function
