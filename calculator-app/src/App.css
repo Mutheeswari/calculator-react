@@ -7,7 +7,7 @@ ul.ul-numbers {
 }
 
 .set-width {
-  width: 660px;
+  width: 700px;
   height: 100px;
   font-size: 48px;
   border-radius: 8px;
@@ -19,7 +19,7 @@ ul.ul-numbers {
 .App-header {
   background-color: black;
   border-radius: 8px;
-  min-height: 10vh;
+  min-height: 5vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -30,7 +30,7 @@ ul.ul-numbers {
 }
 
 .button-zero {
-  width: 230px;
+  width: 225px;
   border-radius: 8px;
   font-size: 40px;
   font-family: 'Cutive Mono', monospace;
@@ -78,9 +78,9 @@ ul.ul-numbers {
 }
 
 .button-cldel:hover {
-  background-color: orange;
+  background-color: #ffa550;
 }
 
 .button-numbers:hover {
-  background-color: orange;
+  background-color: #ffa550;
 }
