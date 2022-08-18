@@ -75,8 +75,7 @@ function Buttonnumbers() {
           >
             {buttonName.delete}
           </button>
-        </ul>
-        <ul className="ul-numbers">{listItems} </ul>
+          {listItems} </ul>
       </header>
     </div>
   );
