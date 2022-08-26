@@ -71,3 +71,8 @@ ul.ul-numbers {
 .button-numbers:hover {
   background-color: #ffa550;
 }
+
+.active {
+  color: green;
+  border: 1px solid black
+}
