@@ -12,7 +12,7 @@ function Calculator() {
         <ButtonContext.Provider value={{ digit, setDigit }}>
           <Editbox /> {/*call Editbox.js file*/}
           <Buttonnumbers /> {/*call Buttonnumbers.js file*/}
-        </ButtonContext.Provider>      
+        </ButtonContext.Provider>  
     </div>
   );
 }
