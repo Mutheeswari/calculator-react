@@ -1,3 +1,4 @@
+<<<<<<< HEAD:calculator-app/src/pages/Calculator.js
 import React, { useState, createContext } from "react"; // importing Hook and React
 import "./App.css"; // Importing App.css for accessing class
 import Editbox from "./Editbox"; // Import Editbox.js
@@ -7,20 +8,21 @@ export const ButtonContext = createContext(); // to create context for passing t
 // To define the function App
 function Calculator() {
   const [digit, setDigit] = useState(0); // Declare useState to initialize the digit in the EditBox
+import React, { useState, createContext } from "react"; 
+import "./App.css"; 
+import Editbox from "./Editbox"; 
+import Buttonnumbers from "./Buttonnumbers"; 
+export const ButtonContext = createContext(); // using ButtonContext
+function Calculator() {
+  const [digit, setDigit] = useState(0); // initialize zero
   return (
-    // call "App" and  "App-header" class in the App.css
-    <div className="App">
-      <header className="App-header">
-        {/* Pass the state to another component using context provider */}
+    <div className="App-header">          
         <ButtonContext.Provider value={{ digit, setDigit }}>
-          <div className="border-app">
-
           <Editbox /> {/*call Editbox.js file*/}
           <Buttonnumbers /> {/*call Buttonnumbers.js file*/}
-          </div>
-        </ButtonContext.Provider>
-      </header>
+        </ButtonContext.Provider>      
     </div>
   );
+}
 }
 export default Calculator;

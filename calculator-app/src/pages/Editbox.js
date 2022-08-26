@@ -6,9 +6,7 @@ function Editbox() {
   const buttoncont = useContext(ButtonContext); // Define useContext with imported context (ButtonContext)
   const { digit } = buttoncont; // destructuring the (buttoncont) context variable which are needed
   return (
-    // call "App" and  "App-header" class in the App.css
-    <div className="App">
-      <header className="App-header">
+    <div>    
         {/*Display Edit box with value which was returned from App.js*/}
         <input
           type="text"
@@ -16,8 +14,7 @@ function Editbox() {
           name="edittxt"
           class="set-width"
           value={digit}
-        />
-      </header>
+        />    
     </div>
   );
 }

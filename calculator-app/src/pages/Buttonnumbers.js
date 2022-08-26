@@ -57,7 +57,7 @@ function Buttonnumbers() {
     // Button with onClick
     <li
       // className="button-numbers"
-      className={number === 0 ? "button-zero" : "button-numbers"}
+      className={`button-numbers ${number === 0 ? "button-zero" : ""}`}
       key={number.toString()}
       onClick={() => getValue(number)}
     >
@@ -65,12 +65,10 @@ function Buttonnumbers() {
     </li>
   ));
   return (
-    // call "App", "App-header" and "ul-numbers" class in the App.css
-    <div className="App">
-      <header className="App-header">
-        <ul className="ul-numbers">
-          {/*to display "clear","Del" and "numbers" buttons here*/}
-          <button
+    <div className="buttonNumberMainDiv">
+    
+        <ul>
+          {/* <button
             type="button"
             className="button-cldel"
             onClick={() => setDigit(0)}
@@ -83,9 +81,9 @@ function Buttonnumbers() {
             onClick={() => removeString(digit)}
           >
             {buttonName.delete}
-          </button>
+          </button> */}
           {listItems} </ul>
-      </header>
+     
     </div>
   );
 }
