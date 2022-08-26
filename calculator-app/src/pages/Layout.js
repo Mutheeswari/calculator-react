@@ -1,5 +1,4 @@
-import { Outlet, Link, useLocation} from "react-router-dom";
-
+import { Outlet, NavLink, useLocation} from "react-router-dom";
 const Layout = () => {
     const location = useLocation();
     console.log(location);
@@ -12,17 +11,17 @@ const Layout = () => {
     <>
       <nav>
         <ul>
-          <li className={(location.pathname === "/Home" ? active : "")} style = {{display:"inline", padding:"10px"}}>
-            <Link to="/Home">Home</Link>
+          <li style = {{display:"inline", padding:"10px"}}>
+            <NavLink activeClassName = {active}  to="/Home">Home</NavLink>
           </li>
           <li style = {{display:"inline"}}>
-            <Link to="/Calculator">Calculator</Link>
+            <NavLink activeClassName = {active} to="/Calculator">Calculator</NavLink>
           </li>
           <li style = {{display:"inline", padding:"10px"}}>
-            <Link to="/UserManagement">User Management</Link>
+            <NavLink activeClassName = {active} to="/UserManagement">User Management</NavLink>
           </li>
           <li style = {{display:"inline", padding:"10px"}}>
-            <Link to="/prtmgnt"> Product Management</Link>
+            <NavLink activeClassName = {active} to="/prtmgnt"> Product Management</NavLink>
           </li>
         </ul>
       </nav>
