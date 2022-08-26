@@ -1,7 +1,7 @@
 import "./App.css"; // import App.css to get the class
 import { useContext, useState } from "react"; // import useContext
-import { ButtonContext } from "./App"; // import ButtonContext which was created in the App.js
-import { operators, buttonLabels, buttonName } from "./constants";
+import { ButtonContext } from "./Calculator"; // import ButtonContext which was created in the App.js
+import { operators, buttonLabels} from "./constants";
 function Buttonnumbers() {
   const { digit, setDigit } = useContext(ButtonContext); // Define useContext with imported context (ButtonContext)
   const [arrayvalue, setArrayvalue] = useState({
@@ -9,9 +9,6 @@ function Buttonnumbers() {
     operator: "",
     thirdItem: undefined,
   });
-  const removeString = (digi) => {
-    setDigit(digi.slice(0, -1));
-  };
   // To append numbers in the EditBox
   const appendNumber = (num) => {
     // To find whether the EditBox value is "0" or not
@@ -57,7 +54,7 @@ function Buttonnumbers() {
     // Button with onClick
     <li
       // className="button-numbers"
-      className={number === 0 ? "button-zero" : "button-numbers"}
+      className={`button-numbers ${number === 0 ? "button-zero" : ""}`}
       key={number.toString()}
       onClick={() => getValue(number)}
     >
@@ -65,12 +62,10 @@ function Buttonnumbers() {
     </li>
   ));
   return (
-    // call "App", "App-header" and "ul-numbers" class in the App.css
-    <div className="App">
-      <header className="App-header">
-        <ul className="ul-numbers">
-          {/*to display "clear","Del" and "numbers" buttons here*/}
-          <button
+    <div className="buttonNumberMainDiv">
+    
+        <ul>
+          {/* <button
             type="button"
             className="button-cldel"
             onClick={() => setDigit(0)}
@@ -83,9 +78,9 @@ function Buttonnumbers() {
             onClick={() => removeString(digit)}
           >
             {buttonName.delete}
-          </button>
+          </button> */}
           {listItems} </ul>
-      </header>
+     
     </div>
   );
 }

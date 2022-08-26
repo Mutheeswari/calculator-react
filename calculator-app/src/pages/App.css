@@ -1,4 +1,4 @@
-.App {
+body {
   text-align: center;
 }
 .border-app{
@@ -6,17 +6,14 @@
   border: 1px solid white;
 }
 ul.ul-numbers {
-  width: 40%;
+  width: 60%;
 }
 
 .set-width {
-  width: 700px;
-  height: 100px;
   font-size: 48px;
   border-radius: 8px;
-  font-family: 'Cutive Mono', monospace;
-  text-align: right;
-  
+  text-align: right;  
+  width: 100%;
 }
 
 .App-header {
@@ -30,36 +27,24 @@ ul.ul-numbers {
   font-size: 48px;
   color: black;
   padding: 10px;
+  border: 1px solid red;
+  position: absolute;
+  left: 30%;
+  width: 34%;
 }
 
-.button-zero {
-  width: 225px;
-  border-radius: 8px;
-  font-size: 40px;
-  font-family: 'Cutive Mono', monospace;
-  height: 60px;
-  color: black;
-  align-items: center;
-  justify-content: center;
-  display: inline-block;
-  padding: 50px;
-  margin: 10px;
-  background: white;
-  border: none;
+.buttonNumberMainDiv {
+  position: relative;
+    margin-top: -9%;
+    width: 100%;
+    left: -14%;
 }
-
 .button-numbers {
-  width: 50px;
-  border-radius: 8px;
-  font-size: 40px;
-  font-family: 'Cutive Mono', monospace;
-  height: 60px;
+  font-size: 2vw;
   color: black;
-  align-items: center;
-  justify-content: center;
   display: inline-block;
-  padding: 50px;
-  margin: 10px;
+  padding: 7%;
+  margin: 3%;
   background: white;
   border-radius: 8px;
   border: none;
@@ -72,7 +57,6 @@ ul.ul-numbers {
   height: 70px;
   color: white;
   text-align: center;
-  font-family: 'Cutive Mono', monospace;
   background: grey;
   justify-content: center;
   display: inline-block;
@@ -86,4 +70,9 @@ ul.ul-numbers {
 
 .button-numbers:hover {
   background-color: #ffa550;
+}
+
+.active {
+  color: green;
+  border: 1px solid black
 }
