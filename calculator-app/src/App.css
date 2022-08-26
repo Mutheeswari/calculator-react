@@ -1,31 +1,54 @@
 .App {
   text-align: center;
 }
+.border-app{
+  width: 90%;
+  border: 1px solid white;
+}
 ul.ul-numbers {
   width: 40%;
 }
+
 .set-width {
-  width: 600px;
+  width: 700px;
   height: 100px;
   font-size: 48px;
   border-radius: 8px;
   font-family: 'Cutive Mono', monospace;
   text-align: right;
 }
+
 .App-header {
   background-color: black;
   border-radius: 8px;
-  min-height: 10vh;
+  min-height: 5vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size:48px;
+  font-size: 48px;
   color: black;
-  padding: 0 10px;
+  padding: 10px;
 }
+
+.button-zero {
+  width: 225px;
+  border-radius: 8px;
+  font-size: 40px;
+  font-family: 'Cutive Mono', monospace;
+  height: 60px;
+  color: black;
+  align-items: center;
+  justify-content: center;
+  display: inline-block;
+  padding: 50px;
+  margin: 10px;
+  background: white;
+  border: none;
+}
+
 .button-numbers {
-  width: 40px;
+  width: 50px;
   border-radius: 8px;
   font-size: 40px;
   font-family: 'Cutive Mono', monospace;
@@ -40,23 +63,26 @@ ul.ul-numbers {
   border-radius: 8px;
   border: none;
 }
+
 .button-cldel {
-  width: 250px;
+  width: 320px;
   border-radius: 8px;
   font-size: 35px;
   height: 70px;
   color: white;
   text-align: center;
-  font-family:'Cutive Mono', monospace;
+  font-family: 'Cutive Mono', monospace;
   background: grey;
   justify-content: center;
   display: inline-block;
   padding: 50px;
   margin: 10px;
 }
+
 .button-cldel:hover {
   background-color: #ffa550;
 }
+
 .button-numbers:hover {
   background-color: #ffa550;
 }

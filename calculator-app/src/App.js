@@ -2,6 +2,7 @@ import React, { useState, createContext } from "react"; // importing Hook and Re
 import "./App.css"; // Importing App.css for accessing class
 import Editbox from "./Editbox"; // Import Editbox.js
 import Buttonnumbers from "./Buttonnumbers"; // Import buttonnumbers.js
+// import Buttonnum from "./Buttonnum";
 export const ButtonContext = createContext(); // to create context for passing the state
 // To define the function App
 function App() {
@@ -12,8 +13,11 @@ function App() {
       <header className="App-header">
         {/* Pass the state to another component using context provider */}
         <ButtonContext.Provider value={{ digit, setDigit }}>
+          <div className="border-app">
+
           <Editbox /> {/*call Editbox.js file*/}
           <Buttonnumbers /> {/*call Buttonnumbers.js file*/}
+          </div>
         </ButtonContext.Provider>
       </header>
     </div>
