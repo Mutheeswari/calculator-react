@@ -5,7 +5,7 @@ import Buttonnumbers from "./Buttonnumbers"; // Import buttonnumbers.js
 // import Buttonnum from "./Buttonnum";
 export const ButtonContext = createContext(); // to create context for passing the state
 // To define the function App
-function App() {
+function Calculator() {
   const [digit, setDigit] = useState(0); // Declare useState to initialize the digit in the EditBox
   return (
     // call "App" and  "App-header" class in the App.css
@@ -23,4 +23,4 @@ function App() {
     </div>
   );
 }
-export default App;
+export default Calculator;

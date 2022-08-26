@@ -1,6 +1,6 @@
 import "./App.css"; // import App.css to get the class
 import { useContext, useState } from "react"; // import useContext
-import { ButtonContext } from "./App"; // import ButtonContext which was created in the App.js
+import { ButtonContext } from "./Calculator"; // import ButtonContext which was created in the App.js
 import { operators, buttonLabels, buttonName } from "./constants";
 function Buttonnumbers() {
   const { digit, setDigit } = useContext(ButtonContext); // Define useContext with imported context (ButtonContext)
