@@ -1,7 +1,10 @@
 .App {
   text-align: center;
 }
-
+.border-app{
+  width: 90%;
+  border: 1px solid white;
+}
 ul.ul-numbers {
   width: 40%;
 }

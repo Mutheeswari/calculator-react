@@ -9,8 +9,8 @@ function App() {
     <div className="App">
       <header className="App-header">
         <ButtonContext.Provider value={{ digit, setDigit }}>
-          <Editbox /> 
-          <Buttonnumbers /> 
+          <Editbox /> {/*call Editbox.js file*/}
+          <Buttonnumbers /> {/*call Buttonnumbers.js file*/}
         </ButtonContext.Provider>
       </header>
     </div>
