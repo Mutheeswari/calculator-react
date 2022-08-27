@@ -1,0 +1,78 @@
+body {
+  text-align: center;
+  font-family: 'Cutive Mono', monospace;
+}
+
+.set-width {
+  font-size: 48px;
+  border-radius: 8px;
+  text-align: right;  
+  width: 100%;
+}
+
+.App-header {
+  background-color: black;
+  border-radius: 8px;
+  min-height: 5vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  color: black;
+  padding: 10px;
+  border: 1px solid red;
+  position: absolute;
+  left: 30%;
+  width: 34%;
+}
+
+.buttonNumberMainDiv {
+  position: relative;
+    margin-top: -9%;
+    width: 100%;
+    left: -14%;
+}
+.button-zero {
+  
+/*  
+  align-items: center;
+  justify-content: center; */
+/* 
+  padding: 50px;
+  margin: 10px; */
+
+}
+
+.button-numbers {
+  font-size: 2vw;
+  color: black;
+  display: inline-block;
+  padding: 7%;
+  margin: 3%;
+  background: white;
+  border-radius: 8px;
+  border: none;
+}
+
+.button-cldel {
+  width: 320px;
+  border-radius: 8px;
+  font-size: 35px;
+  height: 70px;
+  color: white;
+  text-align: center;
+  background: grey;
+  justify-content: center;
+  display: inline-block;
+  padding: 50px;
+  margin: 10px;
+}
+
+.button-cldel:hover {
+  background-color: #ffa550;
+}
+
+.button-numbers:hover {
+  background-color: #ffa550;
+}
