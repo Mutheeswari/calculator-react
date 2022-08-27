@@ -1,31 +1,26 @@
-import { Outlet, Link ,useLocation} from "react-router-dom";
-
+import { Outlet, NavLink} from "react-router-dom";
+import "./App.css";
 const Layout = () => {
-  const location = useLocation();
-  console.log(location.pathname)
-  console.log(location.pathname === "/home")
-  const active = {  
-    color: "lightBlue",  
-    fontFamily: "Arial"  
-  };
-  const noactive = {  
-    color: "red",  
-    fontFamily: "Arial"  
-  };
   return (
     <>
       <nav>
         <ul>
-          <li className={`noactive ${location.pathname === "/home" ? "active" : ""}`} style={{display:"inline", padding:"10px"}}>
-            <Link to="/home">Home</Link>
+          <li style = {{display:"inline", padding:"10px"}}>
+            <NavLink activeClassName ="active"  to="/Home">Home</NavLink>
           </li>
-          <li className={`noactive ${location.pathname === "/home" ? "active" : ""}`} style={{display:"inline",padding:"10px"}}>
-            <Link to="/calculator">Calculator</Link>
+          <li style = {{display:"inline"}}>
+            <NavLink activeClassName ="active" to="/Calculator">Calculator</NavLink>
+          </li>
+          <li style = {{display:"inline", padding:"10px"}}>
+            <NavLink activeClassName ="active" to="/UserManagement">User Management</NavLink>
+          </li>
+          <li style = {{display:"inline", padding:"10px"}}>
+            <NavLink activeClassName ="active" to="/prtmgnt"> Product Management</NavLink>
           </li>
         </ul>
       </nav>
-
-      <Outlet />
+      <Outlet/>
+      
     </>
   )
 };
