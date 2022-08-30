@@ -1,24 +1,24 @@
 import { Outlet, NavLink} from "react-router-dom";
+import { Button } from 'react-bootstrap';
+import Nav from 'react-bootstrap/Nav';
 import "./App.css";
 const Layout = () => {
   return (
     <>
-      <nav>
-        <ul>
-          <li style = {{display:"inline", padding:"10px"}}>
-            <NavLink activeClassName ="active"  to="/Home">Home</NavLink>
-          </li>
-          <li style = {{display:"inline"}}>
-            <NavLink activeClassName ="active" to="/Calculator">Calculator</NavLink>
-          </li>
-          <li style = {{display:"inline", padding:"10px"}}>
-            <NavLink activeClassName ="active" to="/UserManagement">User Management</NavLink>
-          </li>
-          <li style = {{display:"inline", padding:"10px"}}>
-            <NavLink activeClassName ="active" to="/prtmgnt"> Product Management</NavLink>
-          </li>
-        </ul>
-      </nav>
+ <Nav>
+    <Nav.Item>
+        <Nav.Link href="/Home">Home</Nav.Link>
+     </Nav.Item>
+     <Nav.Item>
+        <Nav.Link href="/Calculator">Calculator</Nav.Link>
+     </Nav.Item>
+     <Nav.Item>
+        <Nav.Link href="/UserManagement">User Management</Nav.Link>
+     </Nav.Item>
+     <Nav.Item>
+        <Nav.Link href="/prtmgnt">Product Management</Nav.Link>
+     </Nav.Item>
+     </Nav>
       <Outlet/>
       
     </>

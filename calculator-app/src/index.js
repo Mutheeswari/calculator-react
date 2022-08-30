@@ -5,7 +5,7 @@ import Home from "./pages/Home";
 import Calculator from "./pages/Calculator";
 import UserManagement from "./pages/UserManagement";
 import ProductManagement from "./pages/ProductManagement";
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function App() {
   return (
