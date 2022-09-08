@@ -3,7 +3,20 @@ import React, { useState} from "react";
 
 
 const TaskManagement = () => {
-  const [task, setTask] = useState(['shopping', 'gaming', 'scanning', 'playing']); 
+  const [task, setTask] = useState(['shopping', 'gaming', 'scanning', 'playing']);
+  const listTask = task.map((taskName, index) => (
+    <li
+      className={`${index % 2 === 0 ? "list-group-item list-group-item-danger" : "list-group-item list-group-item-success"}`}
+      key={taskName.toString()}>
+      {taskName}<span className="close">x</span>
+    </li>
+  ));
+  const addTask = ( event ) => {
+    console.log(event.target.value)
+    setTask(task.push(event.target.value))
+  };
+
+  
   return (
     <>
       <div className="container">
@@ -11,24 +24,13 @@ const TaskManagement = () => {
           <h1>My TODO List</h1>
           <div className="form-group">
             <div className="row">
-              <div className="col-sm-1">
+              {/* <div className="col-sm-1">
                 <label for="usr">Enter Task : </label>
-              </div>
+              </div> */}
               <div className="col-sm-9">
-                <input type="text" className="form-control" id="usr" />
+                <input type="text" className="form-control" id="usr" placeholder="Enter Task" />
                 <ul className="list-group">
-                  <li className="list-group-item list-group-item-success">
-                    {task[0]}<span className="close">x</span>
-                  </li>
-                  <li className="list-group-item list-group-item-danger">
-                    {task[1]}<span className="close">x</span>
-                  </li>
-                  <li className="list-group-item list-group-item-success">
-                    {task[2]}<span className="close">x</span>
-                  </li>
-                  <li className="list-group-item list-group-item-danger">
-                    {task[3]}<span className="close">x</span>
-                  </li>
+                  {listTask}
                 </ul>
               </div>
               <div className="col-sm-2">
