@@ -1,44 +1,44 @@
 import "./App.css";
+import React, { useState} from "react"; 
+
 
 const TaskManagement = () => {
+  const [task, setTask] = useState(['shopping', 'gaming', 'scanning', 'playing']); 
   return (
     <>
-      <div class="container">
-        <div class="jumbotron">
+      <div className="container">
+        <div className="jumbotron">
           <h1>My TODO List</h1>
-          <div class="form-group">
-            <div class="row">
-              <div class="col-sm-1">
+          <div className="form-group">
+            <div className="row">
+              <div className="col-sm-1">
                 <label for="usr">Enter Task : </label>
               </div>
-              <div class="col-sm-9">
-                <input type="text" class="form-control" id="usr" />
-                <ul class="list-group">
-                  <li class="list-group-item list-group-item-success">
-                    First item
-                    <span className="close">x</span>
+              <div className="col-sm-9">
+                <input type="text" className="form-control" id="usr" />
+                <ul className="list-group">
+                  <li className="list-group-item list-group-item-success">
+                    {task[0]}<span className="close">x</span>
                   </li>
-                  <li class="list-group-item list-group-item-danger">
-                    Second item
-                    <span className="close">x</span>
+                  <li className="list-group-item list-group-item-danger">
+                    {task[1]}<span className="close">x</span>
                   </li>
-                  <li class="list-group-item list-group-item-success">
-                    Third item
-                    <span className="close">x</span>
+                  <li className="list-group-item list-group-item-success">
+                    {task[2]}<span className="close">x</span>
                   </li>
-                  <li class="list-group-item list-group-item-danger">
-                    Fourth item
-                    <span className="close">x</span>
+                  <li className="list-group-item list-group-item-danger">
+                    {task[3]}<span className="close">x</span>
                   </li>
                 </ul>
               </div>
-              <div class="col-sm-2">
-                <button type="button" class="btn btn-info">
-                 ADD
+              <div className="col-sm-2">
+                <button type="button" className="btn btn-info">
+                  ADD
                 </button>
               </div>
             </div>
           </div>
+          {/* <div className="col-sm-9"> */}
         </div>
       </div>
     </>
