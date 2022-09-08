@@ -5,7 +5,8 @@ import Home from "./pages/Home";
 import Calculator from "./pages/Calculator";
 import UserManagement from "./pages/UserManagement";
 import ProductManagement from "./pages/ProductManagement";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import TaskManagement from "./pages/TaskManagement";
+import './bootstrap.min.css';
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
           <Route path="calculator" element={<Calculator/>} />
           <Route path="user-management" element={<UserManagement/>} />
           <Route path="prtmgnt" element={<ProductManagement/>} />
+          <Route path="taskmgnt" element={<TaskManagement/>} />
         </Route>
       </Routes>
     </BrowserRouter>
