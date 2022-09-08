@@ -1,6 +1,6 @@
 import Mutheeswari from "./Mutheeswari";
 // import {useState} from  "react";
-import {Button, Alert} from "react-bootstrap";
+// import {Button, Alert} from "react-bootstrap";
 // const name1="shobana"
 // const val="Hello"
 const Home = () => {
@@ -13,10 +13,10 @@ const Home = () => {
     return (
       <>
     {/* <Mutheeswari handleValue={handleName}/> */}
-    <Alert variant='primary'>This is text alert</Alert>
+    {/* <Alert variant='primary'>This is text alert</Alert>
     <Button variant="primary">Increment</Button>
-    <Button variant="primary">Decrement</Button>
-
+    <Button variant="primary">Decrement</Button> */}
+    <button type="button" class="btn btn-success">Success</button>
     {/* <div>
     {cnt}
     </div> */}
