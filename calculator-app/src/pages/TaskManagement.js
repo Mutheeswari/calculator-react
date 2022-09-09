@@ -1,9 +1,20 @@
 import "./App.css";
-import React, { useState} from "react"; 
-
+import React, { useState } from "react";
 
 const TaskManagement = () => {
-  const [task, setTask] = useState(['shopping', 'gaming', 'scanning', 'playing']); 
+  const [task] = useState(["shopping", "gaming", "scanning", "playing"]);
+  const listItems = task.map((task, index) => (
+    <li
+      className={`list-group-item ${
+        index % 2 === 0 ? "list-group-item-danger" : "list-group-item-success"
+      }`}
+      key={task.toString()}
+      // onClick={() => getValue(task)}
+    >
+      {task}
+      <span className="close">x</span>
+    </li>
+  ));
   return (
     <>
       <div className="container">
@@ -11,25 +22,9 @@ const TaskManagement = () => {
           <h1>My TODO List</h1>
           <div className="form-group">
             <div className="row">
-              <div className="col-sm-1">
-                <label for="usr">Enter Task : </label>
-              </div>
-              <div className="col-sm-9">
-                <input type="text" className="form-control" id="usr" />
-                <ul className="list-group">
-                  <li className="list-group-item list-group-item-success">
-                    {task[0]}<span className="close">x</span>
-                  </li>
-                  <li className="list-group-item list-group-item-danger">
-                    {task[1]}<span className="close">x</span>
-                  </li>
-                  <li className="list-group-item list-group-item-success">
-                    {task[2]}<span className="close">x</span>
-                  </li>
-                  <li className="list-group-item list-group-item-danger">
-                    {task[3]}<span className="close">x</span>
-                  </li>
-                </ul>
+                <div className="col-sm-10">
+                <input type="text" className="form-control" id="usr" placeholder="Enter task" />
+                <ul className="list-group">{listItems}</ul>
               </div>
               <div className="col-sm-2">
                 <button type="button" className="btn btn-info">
@@ -38,7 +33,6 @@ const TaskManagement = () => {
               </div>
             </div>
           </div>
-          {/* <div className="col-sm-9"> */}
         </div>
       </div>
     </>
