@@ -65,20 +65,6 @@ function Buttonnumbers() {
     <div className="buttonNumberMainDiv">
     
         <ul>
-          {/* <button
-            type="button"
-            className="button-cldel"
-            onClick={() => setDigit(0)}
-          >
-            {buttonName.clear}
-          </button>
-          <button
-            type="button"
-            className="button-cldel"
-            onClick={() => removeString(digit)}
-          >
-            {buttonName.delete}
-          </button> */}
           {listItems} </ul>
      
     </div>
