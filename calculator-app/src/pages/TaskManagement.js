@@ -3,6 +3,7 @@ import React, { useState } from "react";
 
 const TaskManagement = () => {
   const [task] = useState(["shopping", "gaming", "scanning", "playing"]);
+  const [name, setName] = useState([]);
   const listItems = task.map((task, index) => (
     <li
       className={`list-group-item ${
@@ -15,6 +16,28 @@ const TaskManagement = () => {
       <span className="close">x</span>
     </li>
   ));
+
+            // const addItem = e => {
+            //   e.preventDefault()
+            //   const trimmedUserInput = userInput.trim()
+            //   if (trimmedUserInput) {
+            //     setTodoList(existingItems => [
+            //       ...existingItems,
+            //       { name: trimmedUserInput, finished: false },
+            //     ])
+            //     setUserInput("")
+            //   }
+            // }
+const addItem =() => {
+ console.log('addItem');
+}
+const deleteItem =() => {
+  console.log('deleteItem');
+ }
+ 
+            
+        
+ 
   return (
     <>
       <div className="container">
@@ -30,17 +53,20 @@ const TaskManagement = () => {
                 <ul className="list-group">{listItems}</ul>
               </div>
             <div className="col-sm-2">
-              <button type="button" className="btn btn-info">
+              <button onClick={addItem} type="button" className="btn btn-info">
                 ADD
+              </button>
+              <button onClick={deleteItem} type="button" className="btn btn-info">
+                delete
               </button>
             </div>
           </div>
         </div>
-        {/* <div className="col-sm-9"> */}
       </div>
       </div>
     </>
   );
+
 };
 
 export default TaskManagement;

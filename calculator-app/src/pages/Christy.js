@@ -1,16 +1,16 @@
 
-function Mutheeswari (props) {
+function Christy (props) {
     const myObj={
         "name":"christy",
         "age":25
     }
-    const personname = "muthu";
+    const personname = "chris";
     return (
         <>
-            <h1>Welcome to Mutheeswari</h1>
+            <h1>Welcome to Christy</h1>
             <button onClick={event =>props.handleValue(personname)}>Increment</button>
         </>
     );
   };
   
-  export default Mutheeswari;
+  export default Christy;
